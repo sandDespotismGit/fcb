@@ -22,7 +22,7 @@
     <div class="page">
         <div class="content">
             <?php
-            require_once 'content.php';
+            require_once 'content_new.php';
             ?>
         </div>
     </div>

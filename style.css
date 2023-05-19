@@ -94,3 +94,28 @@ button:hover{
     background: #FFFFFF;
     color: black;
 }
+#players_text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+
+}
+.players{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.carousel_buttons_text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
