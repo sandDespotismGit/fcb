@@ -74,7 +74,7 @@ body{
     margin: 0px;
     padding: 0px;
 }
-button{
+#match{
     border: 3px solid #FFFFFF;
     background: transparent;
     font-family: 'Inter';
@@ -90,7 +90,7 @@ button{
 
     color: #FFFFFF;
 }
-button:hover{
+#match:hover{
     background: #FFFFFF;
     color: black;
 }
@@ -118,4 +118,86 @@ button:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+#name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  
+    color: #000000;
+}
+.carousel_cards > div{
+width: 370px;
+}
+#allplayers_butt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+}
+#all_butt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#role{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #000000;
+
+
+}
+#more{
+border: 1px solid #000000;
+background: transparent;
+padding: 10px 20px 10px 20px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #000000;
+}
+#more:hover{
+    background: #000000;
+    color: #FFFFFF;
+}
+.carousel_cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#allplayers{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+#left{
+    border: 0px;
+}
+#right{
+    border: 0px;
 }

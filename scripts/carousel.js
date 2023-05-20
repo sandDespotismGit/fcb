@@ -24,10 +24,37 @@ let players = [
   '<div class="card"><img src="" alt="Фото игрока"><p id="name">Фёдоров Владислав</p><p id="role">Универсал</p><button id="more">подробнее</button></div>',
   '<div class="card"><img src="" alt="Фото игрока"><p id="name">Шатрашанов Александр</p><p id="role">Универсал</p><button id="more">подробнее</button></div>',
 ];
-let n_count = 1;
+let cards_div = document.getElementsByClassName("carousel_cards");
+
+let card_0 = document.getElementById("0_card");
+let card_1 = document.getElementById("1_card");
+let card_2 = document.getElementById("2_card");
+let card_3 = document.getElementById("3_card");
+let card_4 = document.getElementById("4_card");
+let card_5 = document.getElementById("5_card");
+
+card_3.style.display = "none";
+card_4.style.display = "none";
+card_5.style.display = "none";
+card_0.style.display = "block";
+card_1.style.display = "block";
+card_2.style.display = "block";
+
 function carousel(n) {
   //   n -1 = left n 1 = right
-  n_count += n;
-  if (n_count == 2) {
+  if (n == -1) {
+    card_3.style.display = "none";
+    card_4.style.display = "none";
+    card_5.style.display = "none";
+    card_0.style.display = "block";
+    card_1.style.display = "block";
+    card_2.style.display = "block";
+  } else if (n == 1) {
+    card_3.style.display = "block";
+    card_4.style.display = "block";
+    card_5.style.display = "block";
+    card_0.style.display = "none";
+    card_1.style.display = "none";
+    card_2.style.display = "none";
   }
 }
