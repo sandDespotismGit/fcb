@@ -390,3 +390,25 @@ color: #000000;
 .card{
     width: 370px;
 }
+#match_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.match_info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    /* identical to box height */
+    letter-spacing: 0.02em;
+
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}

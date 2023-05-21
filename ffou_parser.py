@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 url = 'https://ffuo.ru/team/1240664/application'
+url_matches = 'https://ffuo.ru/team/1240664/calendar?season_id=10121044'
+res_matches = requests.get(url_matches)
+soup_matches = BeautifulSoup(res_matches.text, 'html.parser')
 res = requests.get(url)
 soup = BeautifulSoup(res.text, 'html.parser')
 # print(
@@ -16,6 +19,8 @@ soup = BeautifulSoup(res.text, 'html.parser')
 #     'span', {'class': 'composition-list__player-goals-number'})
 players = soup.find_all('div', {'class', 'composition-list__item-back'})
 images = soup.find_all('div', {'class', 'composition-list__player-photo'})
+matches = soup_matches.find_all(
+    'li', {'class', 'schedule__matches-item js-calendar-match js-calendar-last-match'})
 images = [img['src'] if 'https' in img['src'] else 'images/none.png' for img in soup.select(
     '.composition-list__player-photo > img')]
 print(images)
@@ -42,3 +47,8 @@ for i, card in enumerate(cards_info):
         pass
     js_cards.append(js_card)
 print(js_cards)
+print(len(matches))
+
+matches = [match.get_text(' ', True) for match in matches]
+print(matches)
+print(len(matches))
