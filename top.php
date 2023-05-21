@@ -3,7 +3,7 @@
         <img src="images/logo.png" id="logo">
         <div>
             <a href='#'>Матчи</a>
-            <a href='#'>Игроки клуба</a>
+            <a href='players.php'>Игроки клуба</a>
             <a href='#'>Новости</a>
             <a href='#'>Контакты</a>
         </div>

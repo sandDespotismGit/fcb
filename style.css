@@ -355,3 +355,8 @@ color: #000000;
 
 
 }
+#players_list{
+    display: flex;
+    flex-direction: column;
+    
+}
