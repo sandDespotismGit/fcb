@@ -17,6 +17,6 @@
     <div class="top_naming">
         <p id="first_text">Официальная страница мини-футбольного клуба</p>
         <p id="sec_text">Розалия</p>
-        <button id="match">попасть на матч</button>
+        <button class="match">попасть на матч</button>
     </div>
 </div>

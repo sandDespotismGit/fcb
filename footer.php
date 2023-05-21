@@ -1,7 +1,15 @@
-<div>
-    <div class="contracts">
-        <h3>Свяжитесь с нами</h3>
-        <li class = "contracts">C: +78005553535</li>
-        <li class = "contracts">E: anonymousGROUP@proton-mail.ru</li>
+<div class="top_menu">
+    <img src="images/logo.png" id="logo_footer">
+    <div>
+        <a href='#'>Матчи</a>
+        <a href='#'>Игроки клуба</a>
+        <a href='#'>Новости</a>
+        <a href='#'>Контакты</a>
+    </div>
+    <div id="social">
+        <img src="images/vk.png">
+        <img src="images/inst.png">
+        <img src="images/youtube.png">
     </div>
 </div>
+<p id="copyright">©2023 МФК Розалия</p>
