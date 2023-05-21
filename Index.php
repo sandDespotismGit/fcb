@@ -3,7 +3,6 @@
 <head>
     <title>
         <?php
-        require_once 'connect.php';
         require_once 'head.php';
         ?>
     </title>

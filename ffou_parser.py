@@ -16,24 +16,29 @@ soup = BeautifulSoup(res.text, 'html.parser')
 #     'span', {'class': 'composition-list__player-goals-number'})
 players = soup.find_all('div', {'class', 'composition-list__item-back'})
 images = soup.find_all('div', {'class', 'composition-list__player-photo'})
-images = [img['src'] if 'https' in img['src'] else '#' for img in soup.select(
+images = [img['src'] if 'https' in img['src'] else 'images/none.png' for img in soup.select(
     '.composition-list__player-photo > img')]
 print(images)
 
 cards_info = [player.get_text(' ', True).replace(',', '')
               for player in players]
+images.pop(-1)
+images.pop(-1)
+images.pop(-1)
+images.pop(-1)
+images.pop(7)
+images.pop(13)
+images.pop(20)
 cards_info.pop(-1)
 cards_info.pop(-1)
 cards_info.pop(-1)
 cards_info.pop(-1)
 js_cards = []
-for card in cards_info:
+for i, card in enumerate(cards_info):
     card = card.split(' ')
     try:
-        js_card = rf'<div class="card"><img src="" alt="Фото игрока"><p id="name">{card[5]} {card[4]}</p><p id="role">{card[6]}</p><button id="more">подробнее</button></div>'
+        js_card = rf'<div class="card"><img src="{images[i]}" alt="Фото игрока"><p id="name">{card[5]} {card[4]}</p><p id="role">{card[6]}</p><button id="more">подробнее</button></div>'
     except:
         pass
     js_cards.append(js_card)
-
 print(js_cards)
-print(str(len(images)) + ' ' + str(len(js_cards)))
